@@ -1,3 +1,5 @@
+//To Demostrate use of function and calculate time Complexity
+
 #include <cmath>
 #include <cstdio>
 #include <vector>
@@ -18,3 +20,6 @@ int main() {
     cout<<sum;
     return 0;
 }
+
+
+Time Complexity - O(n)
