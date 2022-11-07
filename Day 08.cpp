@@ -1,3 +1,15 @@
+/*You are in charge of the cake for a child's birthday. 
+You have decided the cake will have one candle for each year of their total age.
+They will only be able to blow out the tallest of the candles. Count how many candles are tallest.*/
+
+/*Sample Input 0
+
+4
+3 2 1 3
+Sample Output 0
+
+2*/
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -5,13 +17,6 @@ using namespace std;
 string ltrim(const string &);
 string rtrim(const string &);
 vector<string> split(const string &);
-
-/*
- * Complete the 'birthdayCakeCandles' function below.
- *
- * The function is expected to return an INTEGER.
- * The function accepts INTEGER_ARRAY candles as parameter.
- */
 
 int birthdayCakeCandles(vector<int> candles) {
     int count=0,max=0;
@@ -101,3 +106,5 @@ vector<string> split(const string &str) {
 
     return tokens;
 }
+
+
