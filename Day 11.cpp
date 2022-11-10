@@ -1,95 +1,24 @@
-#include <bits/stdc++.h>
-
+#include<bits/stdc++.h>
 using namespace std;
-
-string ltrim(const string &);
-string rtrim(const string &);
-
-
-
-int main()
-{
-    string n_temp;
-    getline(cin, n_temp);
-
-    int n = stoi(ltrim(rtrim(n_temp)));
-
-    if(n<=9)
-    {
-        if(n==1)
-        {
-            cout<<"one"<<endl;
-        }
-        else if (n==2) {
-            cout<<"two"<<endl;
-        
-        }
-        else if (n==3) {
-            cout<<"three"<<endl;
-        
-        }
-        else if (n==4) {
-            cout<<"four"<<endl;
-        
-        }
-        else if (n==5) {
-            cout<<"five"<<endl;
-        
-        }
-        else if (n==6) {
-            cout<<"six"<<endl;
-        
-        }
-        else if (n==7) {
-            cout<<"seven"<<endl;
-        
-        }
-        else if (n==8) {
-            cout<<"eight"<<endl;
-        
-        }
-        else{
-            cout<<"nine";
-        }
-    }
-    else{
-        cout<<"Greater than 9";
-    }
+int main() {
+     int n[3],s=0;
+   for(int i=0;i<3;i++)
+   {
+       cin>>n[i];
+       s +=n[i];
+   }
+   cout<<s;
     return 0;
-}
-
-string ltrim(const string &str) {
-    string s(str);
-
-    s.erase(
-        s.begin(),
-        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace)))
-    );
-
-    return s;
-}
-
-string rtrim(const string &str) {
-    string s(str);
-
-    s.erase(
-        find_if(s.rbegin(), s.rend(), not1(ptr_fun<int, int>(isspace))).base(),
-        s.end()
-    );
-
-    return s;
 }
 
 /*
 Expected Input 1
- 5
- Output
- five
-
- Expected Input
-44
+127
 Output
-Greater than 9
+10
 
-
+Expected Input 2
+444
+Output
+12
 */
